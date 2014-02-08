@@ -1,6 +1,6 @@
 <?php
-    $connection = mysql_connect("ipserver", "use", "password");
-    mysql_select_db("database_name", $connection);
+    $connection = mysql_connect("127.0.0.1", "root");
+    mysql_select_db("heippianalyticsdemo", $connection);
     $result = mysql_query("SELECT Min(id) as id, image_php_id, path_image, detections_number FROM image_processed where view = 0 ORDER By id", $connection);
 
     $path_image = mysql_result($result, 0, "path_image");    

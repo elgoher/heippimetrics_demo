@@ -106,6 +106,7 @@
                 },
                 success: function(response)
                 { 
+                    console.log(response);
                    // console.log("Envio Exitoso !!");
                   
                    // $('#procesado').attr("src","imagesDemo/imgBuilded"+contador+".jpg");
