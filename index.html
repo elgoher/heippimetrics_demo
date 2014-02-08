@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!-- Index.demo vr 5.0 7-02-2014 -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Heippi: Equipo de trabajo</title>
+    
+    <meta name="description" content="Ofrecemos métricas en vivo del comportamiento del consumidor mediante reconocimiento facial en tiendas fisicas directamente en tu dispositivo preferido">
+    <meta name="viewport" content="width=device-width">   
+    <meta name="robots" content="Index, Follow"> 
+
+	<link rel="author" href="https://www.google.com/+EdgarGuti%C3%A9rrezCamacho"/>
+	<link rel="shortcut icon" href="img/favicon-n.ico" type="image/x-icon" />
+    <link rel="icon" href="img/favicon-n.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/rwd.css">
+
+    <link rel="stylesheet" href="css/notyet.css">
+   
+    
+
+</head>
+
+<body >
+<!--[if lt IE 9]>
+            <p class="chromeframe">Estas usando una <strong>versión muy desactualizada</strong>del navegador. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia como usario en nuestro sitio.</p>
+        <![endif]-->
+
+<!--==================================================
+												HEADER
+======================================================-->        
+
+<header>
+
+<!--_________________________________________NAVBAR--> 
+    
+    <nav>
+        <ul>
+            <li>                
+                <figure>
+                	<a href="index.html"><img src="img/heippi-logo.jpg" alt="Heippi" /></a>
+                </figure>
+            </li>
+            <li>
+            	<ul class="menu-bar">
+                	<li><a href="empresa.html">¿Qué es <span>Heippi</span>?</a></li>
+                    <li><a href="servicios-propuesta-comercial.html">Servicio</a></li>
+                    <li><a href="equipo.html">El equipo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <a class="a-inicio" href="index.html" title="inicio"> </a>
+            	</ul>
+            
+<!--_________________________________________BIGBUTTON-->
+ 
+        	<li><a href="#">WEB<strong>APP</strong></a></li>
+        </ul>
+    </nav>
+    
+<!--_________________________________________SLIDER-->
+    
+    <div class="slider">
+	<figure>
+    	<img/>
+       	<figcaption>
+    		<h3>Tecnología de <strong>reconocimiento facial</strong> aplicada al <strong>marketing</strong> estratégico</h3>        
+    	</figcaption>
+    </figure>    
+    </div>
+    
+</header>
+
+<!--==================================================
+                                                DEMO  
+======================================================-->  
+
+<section class="demo">
+    
+    <h1> DEMO <strong>HEIPPI</strong> METRICS </h1>
+    <p class="explicacion"> Esta demostración les ayudará a comprender visualmente como funciona nuestro <strong>MVP</strong> </p>
+
+<!--=== ELEMENTOS INTERNOS DE LA SECCION CAPTURA ===-->
+
+    <section class="captura">
+        <h2> CAPTURA </h2>
+
+        <canvas id="canvas" class="canvas" width="600px" height="500px" ></canvas>
+        
+        <div class="webcam">
+            <h3> Webcam </h3>
+            <video id="webcam" ></video>
+            <div id="tiempo" >
+             <span class="minutos">00</span>
+             <span class="segundos">: 00</span>
+            </div>
+        </div>
+        
+        <div class="procesado">
+            <h3> Video Procesado </h3>
+            <img id="procesado" />
+            <div id="tiempo" >
+             <span class="minutos">00</span>
+             <span class="segundos">: 00</span>
+            </div>
+        </div>
+
+        <div class="controles">
+            <p>Para empezar haz click --></p>
+            <button class="boton-captura">
+                <span class="on-captura">Encender</span>
+                <span class="off-captura">Apagar</span></button>
+            <p>Existe un retraso de algunos segundos</p>
+        </div>
+
+        <p class="nota"> <strong>NOTA:</strong> Esta demo tiene una duración de <strong>3 minutos</strong> </p>  
+
+    </section>
+
+<!--=== ELEMENTOS INTERNOS DE LA SECCION REPORTE ===-->
+
+    <section class="reporte">
+        <h2> REPORTE </h2>
+
+        <div class="observadores">
+            <h3> observadores </h3>
+            <div id="observadores" > 0 </div>
+        </div>
+
+        <div class="tiempo">
+            <h3> tiempo </h3>
+            <div id="tiempo" >
+             <span id="segundos"class="tiempo">: 00</span>
+             <span id="minutos"class="tiempo">00</span>
+            </div>
+        </div>  
+
+        <div class="total">
+            <h3> total de visualizaciones </h3>
+            <div id="total" > 0 </div>
+        </div>
+
+        <div class="graficas">
+            <button class="generar-grafica"> generar gráficas </button>
+        </div>
+
+    </section>
+
+<!--=== MOSTRAR REPORRTE EN DESARROLLO ===-->
+
+    <section class="en-desarrollo" >
+        <h2>Reportes en desarrollo</h2>
+        <p>Pueden hacer click en el siguiente boton para observar otros reportes que estan actualmente en proceso de desarrollo</p>
+        <button class="mostrar-desarrollo" > ver </button>
+    </section>
+
+<!--=== AVISO LEGAL ===-->
+
+    <p class="aviso-legal"> <strong>AVISO LEGAL:</strong> No se guardara ningun tipo de información sensible en esta demo. </p>    
+            
+</section>
+
+<!--================================================== 
+    										FOOTER
+======================================================-->
+
+<footer>
+	<div class="footer-enlaces">
+       <ul>
+        	<li>
+                <figure>
+                <a href="index.html" alt="ir al inicio">
+                	<img src="img/Icono-Heippi.png" alt="Icono Heippi" />   
+                </a> 
+                </figure>
+			</li>
+        </ul>
+        <ul><h3>Compañía</h3>
+            <li><a href="empresa.html">Quienes Somos</a></li>            
+            <li><a href="equipo.html">El equipo</a></li>            
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="#">Enlace4</a></li>
+        </ul>
+        <ul><h3>Servicio</h3>
+            <li><a href="servicios-propuesta-comercial.html">Propuesta Comercial</a></li>
+            <li><a href="servicios-beneficios.html">Ventajas y Beneficios</a></li>
+            <li><a href="servicios-costos.html">Costos del servicio</a></li>
+            <li><a href="servicios-compromiso.html">Nuestro Compromiso</a></li>
+        </ul>
+        <ul><h3>Comunidad</h3>
+            <li><a href="#">Enlace1</a></li>
+            <li><a href="#">Enlace2</a></li>
+            <li><a href="#">Enlace3</a></li>
+            <li><a href="#">Enlace4</a></li>
+        </ul>
+        <ul>
+            <li><a target="_blank" href="https://www.facebook.com/heippiapp" title="Facebook"></a></li>
+            <li><a target="_blank" href="https://twitter.com/heippiapp" title="Twitter"></a></li>
+            <li><a target="_blank" href="http://www.youtube.com/user/HeippiApp?feature=watch" title="Youtube"></a></li>
+            <li><a target="_blank" href="https://plus.google.com/+HeippiApp/posts" title="Google+"></a></li>
+        </ul>        
+        <ul> <p>¡Lo mejor de HEIPPI!</p>
+            <li>
+                <a href="#ancla">WEB<strong>APP</strong></a> 
+            </li>
+        </ul>
+    </div>
+    <div id="ancla" class="copyright">
+    	<p> COPYRIGHT Â© 2013 HEIPPI S.A.S. Todos los derechos reservados. Colombia</p>
+    </div>
+</footer>
+
+<section class="pop">
+    <div class="pop-up up1">
+        <h1>Advertencia</h1>
+        <p>Callate y sólo haz</p>
+        <button>click</button>
+    </div>
+</section>
+
+<!--=========================================SCRIPTS-->
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/imgReturn.js"></script>
+    
+   
+    <script src="js/modernizr-latest.js"></script>
+    <script src="js/prefixfree.min.js"></script> 
+
+</body>
+</html>

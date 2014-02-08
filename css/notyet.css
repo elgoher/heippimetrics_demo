@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hide /*OCULTAR ELEMENTOS SIN DISPLAY NONE BOILERPLATE*/
+{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*nav>ul>li>ul>li:nth-child(3), Enlace Comunidad*/
+nav>ul>li:last-child, /*Boton WEBAPP menu navbar*/
+footer ul:nth-child(2) li, /*Enlaces del footer "Compañia"*/
+footer ul:nth-child(4), /*Footer Columna Comunidad*/
+footer div ul:last-child 
+{display: none;}
+
+footer ul:nth-child(2) li:nth-child(2), /*Footer Enlace Quienes somos*/
+footer ul:nth-child(2) li:nth-child(3), /*Footer Enlace Contacto*/
+footer ul:nth-child(2) li:nth-child(4)
+{display:inline-block !important; }
+
+.menu-bar /*Disimula la ausencia del WEBAPP btn*/
+{
+	border-radius: 0 3px 3px 0;
+}
+
+footer figure>img /*La imagen del icono e ajusta al nuevo tamaño*/
+{
+	max-width: 65px;
+}
+
+/*footer>div>ul:nth-child(5) los enlaces de contacto social se distribuen horizontalmente
+{
+	max-width: 210px;
+}*/
+
+@media screen and (max-width: 660px) {
+	
+
+
+}

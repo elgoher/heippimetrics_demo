@@ -1,0 +1,563 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Version 5.1 7-02-2013*/
+
+/* CARTA DE NAVEGACIÓN CSS
+	
+	Para navegación buscar con con ctrl + F
+	
+||SECCIONES||
+
+----------/GENERALIDADES/---------
+1) DEMO
+2) APARIENCIA Y ESTILO BOTON HEIPPI
+3) SECCIONES PRIMARIAS
+4) TITULARES
+5) PARRAFOS EXTERIORES
+
+----------/SECCION CAPTURA/---------
+6) ELEMENTOS INTERNOS DE LA SECCION CAPTURA
+7) video e imagen
+8) CANVAS
+9) BARRA DE ENCENDIDO
+10)	BOTON DE CAPTURA
+11) ESTILOS PARA CAMBIAR EL TEXTO DEL BOTON DE CAPTURA
+
+----------/SECCION REPORTE/---------
+12) ELEMENTOS INTERNOS DE LA SECCION REPORTE
+13) CANVAS
+14) BARRA DE ENCENDIDO
+15) ELEMENTOS INTERNOS DE LA SECCION REPORTE
+16) ESTILOS PARA INUTILIZAR EL BOTON DE REPORTE
+17) MENU HEADER
+
+----------/SECCION POP-UP/---------
+18) POPUP
+
+*/
+
+/*===========================================
+-------------------------DEMO
+============================================*/
+
+button, div, section, video, img, p, canvas
+{
+	transition: all ease 0.5s;
+}
+
+header 
+{
+	min-height: 100px !important;
+	background-image: url(../img/bkg-header-0.jpg);
+}
+
+.slider figcaption 
+{
+	margin-top: 5px !important;
+	display: none;
+}
+
+.demo 
+{
+	text-align: center;
+}
+
+/*APARIENCIA Y ESTILO BOTON HEIPPI*/
+
+button
+{
+	color: white;
+	display: inline-block;
+	padding: 0.5em 0;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	border-radius: 0.5em;
+	background-image: url('../img/bkg-btn-01.png');
+	background-size: 100%;
+	background-color: #ff8800;
+	border: 3px solid white;
+	box-shadow: 0px 1px 0px #ddd, 
+				0px 3px 0px #ddd, 
+				0px 5px 5px #bbb; 
+}
+
+button:focus
+{
+	background-image: none;
+	background-color: #ff5500;
+	outline: none;
+	transition: all ease 0.2s;
+	box-shadow:	inset 3px 3px 2px FireBrick, 
+				inset -3px -3px 2px OrangeRed,				 
+				0px 2px 0px #ddd;
+	color: darkred;
+}
+
+button:hover 
+{
+	background-image: none;
+	box-shadow: 0px 1px 0px #ddd, 
+				0px 5px 0px #ddd, 
+				0px 8px 7px #bbb;
+	-webkit-transform: translateY(-5px);	
+	-moz-transform: translateY(-5px);
+	-ms-transform: translateY(-5px);	
+	-o-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+.button:active
+{
+	box-shadow: 0px 0px 0px #ccc, 
+				inset 3px 3px 5px FireBrick, 
+				inset 1px 1px 3px darkred;
+	background-image: none;
+	background-color:rgba(240,96,0,1.00);
+	transition: all ease 0.2s;
+	-webkit-transform: translateY(0px);	
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);	
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	color: darkred
+}
+
+
+
+
+/*------------------------CONTENIDO DEMO----*/
+
+.demo 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'calibri', arial, sans-serif;
+}
+
+/*SECCIONES PRIMARIAS*/
+
+.captura, .reporte
+{
+	border: solid 1px #f2f2f2;
+	border-radius: 0.2em;
+}
+
+.captura, .reporte
+{
+
+	width:100%;
+	display: inline-block;
+	vertical-align: top;
+	min-height: 25em;
+}
+
+.captura 
+{
+	width: 70%;
+	max-width: 700px;
+	padding: 0.5%;
+}
+
+.reporte 
+{
+	max-width: 300px;
+	width: 28%;
+}
+
+/*TITULARES*/
+
+.demo h1
+{
+	font-weight: normal;
+	font-size: 1.9rem;
+	background-color: #ff6600;
+	padding: 0.2em 1em;
+	margin:0 auto;
+}
+
+.demo h1, .demo h2, .captura h3
+{
+	color: white;
+	font-weight: normal;
+}
+
+.demo h1, .captura h3 /*GRADIANTE DE TITULOS, REEMPLAZAR CUANDO PUEDA POR IMAGEN*/
+{
+	background: rgba(255,136,0,1);
+	background: -moz-linear-gradient(top, rgba(255,136,0,1) 0%, rgba(255,85,0,1) 51%, rgba(255,68,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,136,0,1)), color-stop(51%, rgba(255,85,0,1)), color-stop(100%, rgba(255,68,0,1)));
+	background: -webkit-linear-gradient(top, rgba(255,136,0,1) 0%, rgba(255,85,0,1) 51%, rgba(255,68,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,136,0,1) 0%, rgba(255,85,0,1) 51%, rgba(255,68,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,136,0,1) 0%, rgba(255,85,0,1) 51%, rgba(255,68,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,136,0,1) 0%, rgba(255,85,0,1) 51%, rgba(255,68,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8800', endColorstr='#ff4400', GradientType=0 );
+}
+
+.captura h3
+{
+	padding: 0.2em;
+	border-radius:0.2em 0.2em 0 0;
+}
+
+.demo h2 
+{
+	font-weight: normal;
+	font-size: 1.5em;
+	background-color: #ff6600;
+	padding: 0.2em;
+	border-radius: 0.2em;
+	margin: -1.2em auto 0.5em;
+	width: auto;
+	max-width: 150px;
+}
+
+/*PARRAFOS EXTERIORES*/
+
+.demo>p
+{
+	padding: 1em;
+	color: #aaa;
+}
+
+.demo .explicacion
+{
+	padding-bottom: 2em;
+}
+
+/*ELEMENTOS INTERNOS DE LA SECCION CAPTURA*/
+
+.captura .webcam, .captura .procesado
+{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.captura #tiempo /*Coloca cronometro en div de captura*/
+{
+	position: relative;
+	bottom: 1.7em;
+	height: 1.3em;
+	color: white;
+	opacity: .8;
+	font-size: x-large;
+	right: 0em;
+	text-shadow: black 0px 0px .23em;
+	background-color: rgba(0,0,0,.35);
+	line-height: 1.2em;
+	margin-bottom: -1.2em;
+}
+
+/*video e imagen*/
+
+.demo video, .demo img
+{
+	width: 100%;
+	height: 253px;
+	background-size: 105%;
+	background-image: url('../img/nosignal.gif');
+	border: none;
+}
+
+/*CANVAS*/
+
+canvas
+{
+	display: none;
+}
+
+/*BARRA DE ENCENDIDO*/
+
+.captura .controles
+{
+	background-color: #d2d2d2 ;
+	border-radius: 0.3em;	
+	background-image: url('../img/bkg-gradiante-00.png');
+	background-size: 100% 100%;
+	margin: 0.4em auto -0.2em;
+	-webkit-transform: translateY(-1em);
+	-moz-transform: translateY(-1em);
+	-ms-transform: translateY(-1em);
+	-o-transform: translateY(-1em);
+}
+
+.captura .controles p
+{
+	font-size: 0.75em;
+	width: 38%;
+	line-height: 1em;
+	padding: 0.8em 0.2em;
+	text-align: center;
+	display: inline-block;
+	color: gray;
+}
+
+.captura .controles p:first-child
+{
+	font-size: 1em;
+	padding-top: 0.5em;
+}
+
+/*BOTON DE CAPTURA*/
+
+.captura .controles button
+{
+	width: 20%;	
+	margin: -1em auto;
+}
+
+/*ESTILOS PARA CAMBIAR EL TEXTO DEL BOTON DE CAPTURA
+
+Para encender solo debes de cambiar el estilo 
+.on-captura { display : none; }
+.off-captura { display : inherit; } 
+
+*/
+
+.captura .controles button .on-captura
+{
+	display: inherit;
+}
+
+.captura .controles button .off-captura
+{
+	display: none;
+}
+
+.captura .nota
+{
+	color: #ff7700;
+	font-size: 0.9em;
+	padding-top: 0.2em;
+}
+
+/*ELEMENTOS INTERNOS DE LA SECCION REPORTE*/
+
+.reporte h2 
+{
+	margin-top: -1em;
+	margin-bottom: 0.53em;
+}
+
+.reporte div
+{
+	width: 100% ; 
+	border: none 1px #f7f7f7 ;
+}
+
+.reporte div h3
+{
+	padding: 0.3em 0;
+	line-height: 0.85em;
+	text-transform: uppercase;
+	font-size: 0.85em;
+}
+
+.reporte .observadores, .reporte .tiempo, .reporte .total
+{
+	background-color: #f7f7f7;
+	border-style: solid none none ;
+}
+
+.reporte #observadores, .reporte #tiempo, .reporte #total
+{
+	border-style: solid none none ;
+	background-color: #fff;
+	font-size: x-large;
+	color: #ff6600;
+	border: none;
+	padding: 0;
+}
+
+.reporte #observadores
+{
+	font-size: 1200%;
+	padding: 0;
+	line-height: 100%;
+}
+
+.reporte #total
+{
+	font-size: 600%;
+}
+
+.reporte .observadores 
+{
+	float: left;
+	width: 100%;
+}
+
+.reporte .tiempo
+{
+	float: right;
+	width: 40%;
+	display:none;
+}
+
+.reporte .total
+{
+	clear: both;
+}
+
+.reporte .total h3
+{
+	border: none 1px #f7f7f7 ;
+	border-style: solid none none ;
+}
+
+.reporte .observadores h3
+{
+	font-size: larger;
+}
+
+.reporte .graficas
+{
+	border-style: solid none none ;
+	display:none;
+}
+
+.reporte button
+{
+	padding-left: 1em ;
+	padding-right: 1em ;
+	margin: 1% auto;
+}
+
+/*ESTILOS PARA INUTILIZAR EL BOTON DE REPORTE
+
+- Solo debes de cambiar la clase del button 
+"generar-grafica" por "no-work-btn"
+
+*/
+
+.demo .no-work-btn, 
+.demo .no-work-btn:focus, 
+.demo .no-work-btn:hover, 
+.demo .no-work-btn:active, 
+{
+	background-image: none;
+	background-color: LightGrey;
+	box-shadow: 0 0 2px #d2d2d2;
+	color: Silver;
+	text-shadow: 1px 1px 0 #f2f2f2;
+}
+
+/*REPORTE EN DESARROLLO*/
+
+.en-desarrollo
+{
+	display: none;
+	padding: 0.5em 0;
+	border: solid 1px #f2f2f2;
+	width: 98.4%;
+	margin: 0.3em auto;
+}
+
+.demo .en-desarrollo h2 
+{
+	margin: 0.4em auto;
+	max-width: 40%;
+	text-transform: uppercase;
+}
+
+/*===========================================
+-------------------------MENU HEADER
+============================================*/
+
+@media screen and (max-width: 680px){
+
+header 
+{
+	border-top: solid transparent 1px;
+	min-height: 100px !important;
+	background-image: url(../img/bkg-header-0.jpg);
+	background-position: 50% 0% !important;
+	background-repeat: no-repeat;
+	background-size: 150% auto;
+}
+
+.slider figcaption 
+{
+	margin-top: 5px !important;
+}
+
+nav>ul>li>ul>li:nth-child(3) 
+{
+	background-image: none;
+	background-color: #ff8800;
+}
+
+}
+
+/*===========================================
+-------------------------SECCION POP-UP
+============================================*/
+
+.pop {
+	position: fixed;
+	top: 0px;
+	min-width: 100%;
+	height: 102%;
+	display: table;
+	background-color: rgba(0,0,0,.5);
+	left: 0;
+	overflow: hidden;	
+	font-family: 'century gothic', verdana, sans-serif;
+	display:none;
+}
+
+.pop .up1
+{
+	background-color: white;
+	width: 50%;
+	height: auto;
+	margin: 10% auto;
+	padding: 0 0 0.5em;
+	border-radius: 10px;
+	box-shadow: 0 0.2em .9em rgba(0,0,0, .5);
+}
+
+
+.pop .up1 /*gradiante*/
+{
+	background: rgba(255,255,255,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 30%, rgba(246,246,246,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(29%, rgba(255,255,255,1)), color-stop(30%, rgba(255,255,255,1)), color-stop(100%, rgba(246,246,246,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 30%, rgba(246,246,246,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 30%, rgba(246,246,246,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 30%, rgba(246,246,246,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 30%, rgba(246,246,246,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=1 );
+	background-size: cover;
+}
+
+.pop h1
+{
+	background-color: #ff6600;
+	color: white;
+	font-size: 2.5em;
+	line-height: 2em;
+	border-radius: 10px 10px 0 0;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.pop p
+{
+	color: gray;
+	font-size: 1.5em;
+	padding: 0 .2em .5em;
+	font-weight: normal;
+}
+
+.pop button
+{
+	padding: 0.5em 1em;
+	margin-bottom: 1em;
+}
+
+.pop button:focus, .pop button:active
+{
+	color: darkred;
+}

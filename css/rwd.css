@@ -1,0 +1,856 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (min-width: 901px) {
+
+nav>ul>li:nth-child(2) /*Ancha la barra de navegación en el menu*/
+{
+	width: 80%;
+}
+
+footer ul /*Distribuye mejor los enlaces del footer*/
+{
+	width: 30%;
+}
+
+footer ul:nth-child(2) /*Los enlaces de compañia*/
+{
+	width: 30%;
+	max-width: 200px;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+
+nav>ul>li:nth-child(2) /*Ancho Menu Navbar*/
+{
+	width: 75%;
+}
+
+nav>ul>li>ul>li, nav>ul>li>ul>li:first-child  /*Distribuye mejor los 3 enlaces del NAVBAR*/
+{
+	width: 23%;
+	padding: 0 0.25em;
+}
+
+/*----FOOTER----*/
+
+footer>div>ul:nth-child(5) li a /*Social Media Icon Tamaño*/
+{
+	width: 40px;
+	height: 40px;
+}
+
+footer>div>ul:nth-child(5) { /*Social Media Icon Ancho de la columna*/
+	max-width: 180px;
+}
+
+footer ul /*Ancho General de todas las columnas*/
+{
+	width: 30%;
+}
+
+footer ul:first-child { /*Ancho en Automatico del icono de heippi*/
+	width: auto;
+	max-width: 80px;
+}
+
+footer ul:nth-child(2) /*Los enlaces de compañia*/
+{
+	width: 30%;
+	max-width: 200px;
+}
+
+/* ================
+--------- HOME-PAGE
+=================== */
+
+/*----FORMULARIO----*/
+
+.seccion01 /*Seccion video y formulario*/
+{
+	padding: 3% 1% 1%;
+}
+
+.seccion01 .video, .seccion01 iframe /*Centrando video*/ 
+{
+	padding: 3% 1% 2%;
+}
+
+.seccion01 .suscribir { /*Mensaje de suscripción*/
+	width: 56%;
+	text-align: left;
+}
+
+.seccion01 .video, .seccion01 .formulario {
+	width: 49%;
+	min-height: 300px;
+}
+
+/* ================
+--------- CONTACTO
+=================== */
+
+.seccion .submit 
+{
+margin: 2% auto 5%;
+}
+
+}
+
+
+
+@media screen and (max-width: 760px) {
+
+* {transition: all ease 0.5s}
+
+nav ul li ul 
+{
+	padding-top: 0;
+}
+
+nav>ul>li:nth-child(2) /*Ancho Menu Navbar*/
+{
+	width: 70%;
+}
+
+nav>ul>li>ul>li /*Espacio entre listas*/
+{
+	padding: 0;
+	width: 22%;
+}
+
+nav .menu-bar li a
+{
+	font-size: 0.8em;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+}
+
+
+/*----FOOTER----*/
+
+footer>div>ul:nth-child(5)  /*Social Media Icon Ancho de la columna*/
+{ 
+	max-width: 110px;
+}
+
+footer ul:nth-child(3) /*Servicios Ancho de la columna*/
+{
+	min-width: 175px;
+}
+
+footer figure
+{
+	padding-left: 0.5em;
+}
+
+/* ================
+--------- HOME-PAGE
+=================== */
+
+/*----FORMULARIO----*/
+
+.seccion01 /*Seccion video y formulario*/
+{
+	padding: 2% 1% 1%;
+}
+
+.seccion01 .video, .seccion01 iframe /*Centrando video*/ 
+{
+	padding: 3% 1% 2%;
+}
+
+.seccion01 .video, .seccion01 .formulario {
+	min-height: 320px;
+}
+
+/* ================
+--------- CONTACTO
+=================== */
+
+.seccion
+{
+	padding: 3% 1% 1%;
+}
+
+.seccion .img-contacto
+{
+	padding: 0;
+}
+
+.seccion .formulario ul 
+{
+	width: 49%;
+}
+
+.seccion label 
+{
+	padding: 2px;
+}
+
+.seccion .formulario input[type] 
+{
+	margin-bottom: 0.3em;
+	padding: 0.1em;
+}
+
+/* ================
+--------- SERVICIOS
+=================== */
+
+/*MENU INTERNO*/
+
+.segundo-nav ul
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.segundo-nav .link.a0, .segundo-nav .link.a5
+{
+	width:auto;
+}
+
+.segundo-nav .link
+{
+	width: 23%;
+}
+
+}
+
+@media screen and (max-width: 680px) {
+
+header
+{
+	border-top: solid transparent 1px;
+	min-height: 260px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 150% auto;
+}
+
+nav .menu-bar
+{
+	margin-top: 0.5em;
+	border-radius: 0 0.5em 0.5em 0;
+	background-image: none;
+	background-color: #ff6600;
+}
+
+nav ul li ul 
+{
+	padding: 0.1em;
+}
+
+nav>ul>li>ul>li  /*Distribuye mejor los 3 enlaces del NAVBAR*/
+{
+	width: 48%;
+	padding: 0.05em 0;
+	border: solid 1px orange;
+	border-radius: 0.2em;
+	margin-bottom: 0.1em;
+}
+
+nav>ul>li>ul>li:first-child
+{
+	width: 48%;
+}
+
+nav>ul>li>ul>li:first-child a
+{
+	min-width: 0;
+	text-align: center;
+}
+
+nav>ul>li>ul>li:last-child
+{
+	margin-bottom: 0;
+}
+
+nav>ul>li>ul>li:hover, nav>ul>li>ul>li:active
+{
+	background-color: orange;
+}
+
+nav>ul>li:nth-child(2) /*MENU*/
+{
+	width: 65%;
+}
+
+nav figure
+{
+	padding: 20px 0 20px;
+}
+
+nav .menu-bar a.a-inicio 
+{
+	display: none;
+}
+
+/*----SLIDER----*/
+
+.slider figcaption 
+{
+	margin-top:100px;
+}
+
+/*----FOOTER----*/
+
+footer ul /*Ancho General de todas las columnas*/
+{
+	width: 23%;
+}
+
+footer ul:nth-child(2) /*Los enlaces de compañia tienen más espacio*/
+{
+	width: 30%;
+	max-width:inherit;
+}
+
+footer>div>ul:nth-child(5)
+{
+	width: 100%;
+	max-width: 200px; 
+}
+
+footer figure
+{
+	padding: 15px 0.5em 0;	
+}
+
+
+
+
+/* ================
+--------- HOME-PAGE
+=================== */
+
+/*----FORMULARIO----*/
+
+.seccion01 {
+	padding: 1em 0;	
+}
+
+.seccion01 .video, .seccion01 .formulario /*Controlando el video y el formulario al tiempo*/
+{
+	width:98%;	
+	min-height: 0;
+	border-radius: 0;
+	padding: 1em;
+	background-color: #ddd;
+}
+
+.seccion01 .video, .seccion01 iframe 
+{
+	padding: 1em;
+	margin-right: 0;
+	border-radius: 0.5em 0.5em 0 0;
+}
+
+.seccion01 .formulario
+{
+	border-radius: 0 0 0.5em 0.5em;
+}
+
+/*----CONTENIDO OCULTO----*/
+
+.seccion-oculta  .mas-info-button
+{
+	padding-top: 0;
+}
+
+.seccion-oculta article figure img /*IMAGEN QUE PREGUNTA*/
+{
+	width: 50%;
+}
+
+.seccion-oculta section article div /*TEXTO DEL ARTICULO*/
+{ 
+	width: 80%;
+}
+
+/* ================
+--------- SERVICIOS
+=================== */
+
+/*MENU INTERNO*/
+
+.segundo-nav .link
+{	
+	max-width: 130px;
+	width: 25%;
+}
+
+.link.a0, .link.a5 
+{
+	display:none; 
+}
+
+.segundo-nav a
+{
+	padding: 0.1em 0.3em;
+}
+
+/* ================
+--------- EQUIPO
+=================== */
+
+section
+{
+	padding-top: 1em;
+}
+
+section.equipo figure
+{
+	width: 35%;
+	min-width: 180px;
+}
+
+section.equipo figure img
+{
+	border-radius: 1.5em;
+}
+/* ================
+--------- CONTACTO
+=================== */
+
+.seccion
+{
+padding: 5% 1% 1%;
+}
+
+.seccion .img-contacto
+{
+width: 100%;
+}
+
+.seccion .img-contacto img
+{
+padding-left: 3%;
+}
+
+.seccion .formulario 
+{
+width: 70%;
+}
+
+.seccion .formulario .form-contacto 
+{
+padding: 0 10%;
+}
+
+.seccion p
+{
+padding: 0.5em 0.2em 1.5em;
+}
+
+.seccion .formulario ul 
+{
+width: 90%;
+min-width: inherit;
+}
+
+.seccion .formulario input[type] 
+{
+margin-bottom: 0.6em;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+	
+nav figure 
+{
+	padding: 5px 0 5px;
+}
+
+nav>ul>li:nth-child(2) /*MENU*/
+{
+	width: 96%;
+}
+
+nav .menu-bar
+{
+	margin-top: 3%;
+	border-radius: 0.5em;
+	background-color: rgba(255,102,0, .0);
+	margin-bottom: -3%;
+}
+
+nav>ul>li>ul>li  /*Distribuye mejor los 3 enlaces del NAVBAR*/
+{
+	width: 98%;
+	border: none;
+	background-color: #ff6600;
+	background-image: url(../img/bkg-btn-01.png);
+	background-size: 100% 100%;
+}
+
+nav>ul>li>ul>li:last-child
+{
+	width: 98%;
+}
+
+nav .menu-bar li a 
+{
+	display: block;
+	text-align: center ;
+	padding: 0.1em 0 ;
+	margin: 0;
+	background-size: auto 500% ;
+	font-size: 1.3em;
+}
+
+nav .menu-bar a:hover, nav>ul>li>ul>li:first-child a:hover 
+{
+	padding: 0.1em 0 ;
+	margin: 0px;
+	font-style: normal;
+}
+
+nav>ul>li>ul>li:nth-child(2) a 
+{
+	background-position-y: -1px;	
+	background-position-x: 2%;	
+}
+
+nav>ul>li>ul>li:nth-child(3) a 
+{
+	background-position-y: -29px;	
+	background-position-x: 2%;
+}
+
+nav>ul>li>ul>li:nth-child(4) a 
+{
+	background-position-y: -59px;
+	background-position-x: 2%;
+}
+
+nav>ul>li>ul>li:nth-child(2) a:hover,
+nav>ul>li>ul>li:nth-child(3) a:hover,
+nav>ul>li>ul>li:nth-child(4) a:hover 
+{
+	background-position-x: 96%;
+}
+
+nav>ul>li>ul>li:hover, nav>ul>li>ul>li:active
+{
+	background-size: 100% 400%;
+}
+
+nav>ul>li>ul>li:first-child
+{
+	width: 98%;
+}
+
+.slider figcaption 
+{
+	margin-top: 1em;
+	background-color: rgba(255, 102, 0, 1);
+	font-size: 1em;
+}
+
+.slider h3 {
+	font-size: 1em;
+}
+
+/*----FOOTER----*/
+
+footer ul:first-child
+{
+	width:100%;
+	max-width: inherit;
+}
+
+footer>div>ul:nth-child(5)
+{
+	min-width: 200px;
+}
+
+footer ul /*Ancho General de todas las columnas*/
+{
+	width: 100%;
+}
+
+footer ul:nth-child(2) /*Los enlaces de compañia tienen más espacio*/
+{
+	width: 100%;
+}
+
+footer figure
+{
+	padding: 15px 0.5em 0 0;
+}
+
+/* ================
+--------- HOME-PAGE
+=================== */
+
+/*----CONTENIDO OCULTO----*/
+
+.seccion-oculta article figure img /*IMAGEN QUE PREGUNTA*/
+{
+	width: 90%;
+	max-width: 260px;
+	float: none;
+}
+
+.seccion-oculta section article div /*TEXTO DEL ARTICULO*/
+{ 
+	width: 100%;
+	float: none;
+	text-align: center;
+	padding: 0.25em
+}
+
+.seccion-oculta .mas-info .divisor 
+{
+	height: 10px;
+}
+
+/* ================
+--------- SERVICIOS
+=================== */
+
+/*MENU INTERNO*/
+
+
+.segundo-nav .link 
+{
+	max-width: 130px;
+	width: 45%;
+	margin: 0.3em 0;
+	border-radius: 0.3em;
+}
+
+.segundo-nav .link a
+{
+	border-radius: 0.3em;
+}
+
+/* ================
+--------- EQUIPO
+=================== */
+
+section.equipo figure
+{
+	width: 50%;
+	margin: 1em auto;
+}
+
+section.equipo figure img
+{
+	float: none;
+}
+
+/* ================
+--------- CONTACTO
+=================== */
+
+.seccion .formulario 
+{
+	width: 90%;
+	margin-bottom: 2%;
+}
+
+.seccion .formulario .form-contacto 
+{
+	padding: 0 1%;
+}
+
+}
+
+@media screen and (max-width: 320px)
+{
+
+header
+{
+	background-position: 94% 0%;
+	background-size: 249% auto;
+}
+
+nav .menu-bar 
+{
+	margin-bottom: -4%;
+}
+
+nav .menu-bar li a, nav .menu-bar li:nth-child(3) a
+{
+	background-size: auto 400%;
+	text-align: left;
+	padding-left: 0.5em;
+}
+
+nav .menu-bar li a:hover
+{
+	background-color: #ff7700;
+	padding-left: 0.5em;
+}
+
+nav>ul>li>ul>li:last-child a, nav>ul>li>ul>li:last-child a:hover
+{
+	background-position: 96% -74px;
+}
+
+nav>ul>li>ul>li:nth-child(2) a, nav>ul>li>ul>li:nth-child(2) a:hover 
+{
+	background-position: 96% 2px;
+}
+
+nav>ul>li>ul>li:nth-child(3) a, nav>ul>li>ul>li:nth-child(3) a:hover 
+{
+	background-position: 98% -31px;
+	background-size: auto 500% !important;
+}
+
+nav>ul>li>ul>li:nth-child(4) a, nav>ul>li>ul>li:nth-child(4) a:hover 
+{
+	background-position-y: -43px ;
+	background-position-x: 96% ;
+}
+
+/*----FOOTER*/
+
+footer figure
+{
+	padding: 1em 0 0;
+}
+
+footer ul:nth-child(2)
+{	
+	max-width: 200px;
+}
+
+/* ================
+--------- HOME-PAGE
+=================== */
+
+
+
+.seccion01 .video, .seccion01 
+{
+	width: 100%;
+}
+
+.seccion01 .video, .seccion01 iframe 
+{
+	padding: 0.3em;
+	height: 200px;
+}
+
+.seccion01 .video
+{
+	padding-bottom:80%;
+}
+
+/*---FORMULARIO--*/
+
+.form-opinion {
+margin-top: 1em;
+}
+
+.seccion01 .formulario 
+{
+	width: 100%;
+	padding: 0.5em;
+	border-radius: 0;
+}
+
+.seccion01 p 
+{
+	padding: 0 0.2em 0.4em;
+}
+
+.seccion01 ul
+{
+	padding: 0.2em;
+}
+
+.seccion01 label 
+{
+	width: 100%;
+	text-align: center;
+}
+
+input[type="email"], input[type="text"], .seccion01 .formulario textarea
+{
+	width: 96%;
+}
+
+.seccion01 .suscribir 
+{
+	width: 99%;
+	margin: 0;
+	text-align: center;
+	display: block;
+}
+
+.seccion01 .suscribir p 
+{
+	text-align: center;
+	display: block;
+	padding-bottom: 1em;
+	color: #999;
+}
+
+.seccion01 li:last-child 
+{
+	display: block;
+	width: 100%;
+	padding: 0.5em 0 0.5em;
+	text-align: center;
+}
+
+.seccion01 li:last-child .submit
+{
+	float: none;
+	margin: 0.5em auto;
+}
+
+/*-----SECCION-OCULTA*/
+
+.seccion-oculta span>strong
+{
+	padding-right: 0;
+	display: block;
+}
+
+
+
+/* ================
+--------- EQUIPO
+=================== */
+
+section.equipo p
+{
+	text-align:center;
+}
+	
+/* ================
+--------- CONTACTO
+=================== */
+
+.seccion .formulario li 
+{
+margin-bottom: 0.5em;
+}
+
+.seccion .formulario input[type] 
+{
+width: 97%;
+margin-bottom: 0.25em;
+}
+
+.seccion .formulario textarea
+{
+padding: 0.5em 0.1em 2.2em;	
+}
+
+.seccion p 
+{
+padding: 0.2em;
+}
+
+}
