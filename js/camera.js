@@ -82,7 +82,7 @@
                             image_content = canvas.toDataURL("image/jpeg");
 
                              enviarimg(image_content,contador);
-                        },3000
+                        },2000
                     );
                 }, 
                 function(){
@@ -106,6 +106,7 @@
                 },
                 success: function(response)
                 { 
+                    console.log(response);
                    // console.log("Envio Exitoso !!");
                   
                    // $('#procesado').attr("src","imagesDemo/imgBuilded"+contador+".jpg");
