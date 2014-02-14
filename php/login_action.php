@@ -17,7 +17,7 @@ if($row = $rs->fetch_row()){
 	header ("Location: ../main.php");
 }else{
 	echo"<script type='text/javascript'>
-			alert('Usuario / email o password estan errados porfavor intente nuevamente');
+			alert('Usuario / email o password estan errados por favor intente nuevamente');
 			setTimeout(function () {
 			 		location.href='../login.html';
 			 	},10);
