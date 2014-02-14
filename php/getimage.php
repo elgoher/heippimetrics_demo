@@ -4,7 +4,7 @@ $img= $_POST['image'];
 
 if($img!="")
 {
-    $connection = mysql_connect("127.0.0.1", "root", "password");
+    $connection = mysql_connect("127.0.0.1", "root");
    
     mysql_select_db("heippianalyticsdemo", $connection);
    
@@ -22,7 +22,7 @@ if($img!="")
    
     $processed = 0;
     
-    $sql = "INSERT INTO image_php(id, user_id, path_image, processed) VALUES('$maxId', 1,'$pathImage', '$processed')";
+    $sql = "INSERT INTO image_php(id, path_image, processed) VALUES('$maxId','$pathImage', '$processed')";    
 
     mysql_query($sql, $connection);
    
