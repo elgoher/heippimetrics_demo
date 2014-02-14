@@ -56,6 +56,6 @@ var xmlHTTP;
 		var user=$('#user').val();
 		if (!user || user.length === 0) {
 			alert("Usted no ha iniciado sesion y sera redirigido a la pagina de iniciar sesion");
-			setTimeout(function () {location.href='login.html';},1);
+			location.href='login.html';
 		}
 	}
