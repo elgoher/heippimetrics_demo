@@ -14,13 +14,8 @@ if($row = $rs->fetch_row()){
 	$_SESSION['email']  = $row[1];
 	$_SESSION['user']  = $row[2];
 	$_SESSION['password']  = $row[3];
-	header ("Location: ../main.php");
+	echo "main";
 }else{
-	echo"<script type='text/javascript'>
-			alert('Usuario / email o password estan errados por favor intente nuevamente');
-			setTimeout(function () {
-			 		location.href='../login.html';
-			 	},10);
-		</script>";
+	echo"login";
 }
 ?>
