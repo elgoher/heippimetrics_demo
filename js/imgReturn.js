@@ -1,7 +1,7 @@
  
         var step = 0;
 
-        console.log("Iniciando Analisis de Observadores...");
+        // console.log("Iniciando Analisis de Observadores...");
 
         var newObservers = 0;
 

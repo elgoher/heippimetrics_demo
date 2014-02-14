@@ -1,14 +1,12 @@
     var cronometro;
 
-
-
     function carga()
     {
 
         var segundos = 0;
 
-        var minutos  = 3;
-
+        var minutos  = 5;
+ 
         $(".minutos").html('0'+minutos);  
 
         cronometro = setInterval(
