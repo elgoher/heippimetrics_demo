@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <html>
 <head>
 	<title>main en heippi</title>
@@ -8,19 +5,22 @@ session_start();
 	<script src="js/sesion.js"></script>
 	<script src="js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
-	validarSesion();
+	$( document ).ready(function() {
+		validarSesion();
+	});
 	</script>
 </head>
 </head>
 <body>
 <?php
+session_start();
 if (isset($_SESSION['user'])||!empty($_SESSION['user'])) {
 	$user=$_SESSION['user'];
 	echo "bienvenido ".$user;// usuario esta loguiado;
 	?>
 	<input type="hidden" id="user" value=<?php echo $user; ?> />
 <?php
-}
+
 ?>
 <button onclick="cerrarSesion();">salir</button>
 

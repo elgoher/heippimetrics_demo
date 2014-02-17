@@ -19,7 +19,7 @@ var xmlHTTP;
 			 	var res = xmlHTTP.responseText
 			 	
 			 	if(res=="main"){
-			 		setTimeout(function () {location.href='main.php';},10);
+			 		location.href='main.php';
 			 	}
 			 	if(res=="login"){
 			 		$('#update').html("Usuario/e-mail o password estan errados porfavor intente nuevamente");
@@ -41,7 +41,7 @@ var xmlHTTP;
 			 	var res = xmlHTTP.responseText
 			 	console.log(res);
 			 	if (res=="logout") {
-			 		setTimeout(function () {location.href='login.html';},10);
+			 		location.href='login.html';
 			 	}
 			 	if (res=="error") {
 			 		console.log('algo salio mal');
@@ -54,6 +54,7 @@ var xmlHTTP;
 
 	function validarSesion() {
 		var user=$('#user').val();
+		console.log(user);
 		if (!user || user.length === 0) {
 			alert("Usted no ha iniciado sesion y sera redirigido a la pagina de iniciar sesion");
 			location.href='login.html';
