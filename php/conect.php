@@ -7,9 +7,9 @@ function conectar(){
 	return $conn;
 }
 
-function ejecutar_sql($sql,$conn){
+function ejecutar_sql($sql, $conn){
 	
-	$result=$conn->query($sql) or die($conn->error);
+	$result = $conn->query($sql) or die($conn->error);
 	return $result;
 }
 
