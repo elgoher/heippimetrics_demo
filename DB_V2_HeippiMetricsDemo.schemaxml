@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">heippianalyticsdemo</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="consumer_data" view="colnames">
+<left>485</left>
+<top>235</top>
+<width>130</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `consumer_data` (
+  `id` int(11) NOT NULL,
+  `player_id` int(11) NOT NULL,
+  `detection_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lost_time` timestamp NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`),
+  KEY `FK_consumer_data_user` (`player_id`),
+  CONSTRAINT `FK_consumer_data_player` FOREIGN KEY (`player_id`) REFERENCES `player` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="image_processed" view="colnames">
+<left>697</left>
+<top>49</top>
+<width>155</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `image_processed` (
+  `id` int(11) NOT NULL,
+  `image_cam_id` int(11) NOT NULL,
+  `path_image` varchar(100) DEFAULT NULL,
+  `detections_number` int(11) DEFAULT NULL,
+  `view` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_image_processed_image_php` (`image_cam_id`),
+  CONSTRAINT `FK_image_processed_image_cam` FOREIGN KEY (`image_cam_id`) REFERENCES `image_cam` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="user" view="colnames">
+<left>79</left>
+<top>51</top>
+<width>110</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `name_user` varchar(100) DEFAULT NULL,
+  `password` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="player" view="colnames">
+<left>273</left>
+<top>52</top>
+<width>108</width>
+<height>218</height>
+<sql_create_table>CREATE TABLE `player` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `description` varchar(400) DEFAULT NULL,
+  `id_location` int(11) NOT NULL,
+  `address` varchar(300) DEFAULT NULL,
+  `id_cam` int(11) DEFAULT NULL,
+  `id_pc` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_player_camera` (`id_cam`),
+  KEY `FK_player_pc` (`id_pc`),
+  KEY `FK_player_user` (`user_id`),
+  CONSTRAINT `FK_player_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_player_camera` FOREIGN KEY (`id_cam`) REFERENCES `camera` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_player_pc` FOREIGN KEY (`id_pc`) REFERENCES `pc` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="camera" view="colnames">
+<left>78</left>
+<top>224</top>
+<width>126</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `camera` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `description` varchar(400) DEFAULT NULL,
+  `resolution` int(11) DEFAULT NULL,
+  `quality_image` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="pc" view="colnames">
+<left>73</left>
+<top>399</top>
+<width>134</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `pc` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `description` varchar(400) DEFAULT NULL,
+  `processor_core` int(11) DEFAULT NULL,
+  `ram` int(11) DEFAULT NULL,
+  `storage` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="image_cam" view="colnames">
+<left>489</left>
+<top>51</top>
+<width>113</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `image_cam` (
+  `id` int(11) NOT NULL,
+  `player_id` int(11) NOT NULL,
+  `path_image` varchar(300) NOT NULL,
+  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `processed` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_image_php_user` (`player_id`),
+  CONSTRAINT `FK_image_cam_player` FOREIGN KEY (`player_id`) REFERENCES `player` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
