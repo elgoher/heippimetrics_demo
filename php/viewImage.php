@@ -1,5 +1,5 @@
 <?php
-    $connection = mysql_connect("127.0.0.1", "root");
+    $connection = mysql_connect("127.0.0.1", "root", "macr0728");
     mysql_select_db("heippianalyticsdemo", $connection);
     $result = mysql_query("SELECT Min(id) as id, image_php_id, path_image, detections_number FROM image_processed where view = 0 ORDER By id", $connection);
 
