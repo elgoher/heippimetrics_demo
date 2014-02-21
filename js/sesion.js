@@ -1,7 +1,6 @@
 var xmlHTTP;
 
 	function iniciar () {
-		
 		if (window.XMLHttpRequest) {
 			xmlHTTP=new XMLHttpRequest();
 		}else{
@@ -11,18 +10,17 @@ var xmlHTTP;
 
 	function iniciarSesion(){
 		iniciar();
-		console.log('validar');
-		var user= $('#user').val();
-		var password= $('#password').val();
+		var user= $('.user').val();
+		var password= $('.password').val();
 		xmlHTTP.onreadystatechange=function(){
 			 if (xmlHTTP.readyState==4 && xmlHTTP.status==200) {
-			 	var res = xmlHTTP.responseText
-			 	
-			 	if(res=="main"){
-			 		location.href='main.php';
+			 	var res = xmlHTTP.responseText.split('&&');
+			 	if(res[0]=="main"){
+	 				sessionStorage.setItem("dato",res[1]);
+			 		location.href='main.html';
 			 	}
 			 	if(res=="login"){
-			 		$('#update').html("Usuario/e-mail o password estan errados porfavor intente nuevamente");
+			 		$('.update').html("Usuario/e-mail o password estan errados porfavor intente nuevamente");
 			 	}
 			  }
 			}
@@ -34,8 +32,8 @@ var xmlHTTP;
 	function cerrarSesion() {
 		iniciar();
 		console.log('cerrando sesion');
-		var user= $('#user').val();
-		
+		var user= $('.user').val();
+		sessionStorage.clear();
 		xmlHTTP.onreadystatechange=function(){
 			 if (xmlHTTP.readyState==4 && xmlHTTP.status==200) {
 			 	var res = xmlHTTP.responseText
@@ -48,13 +46,14 @@ var xmlHTTP;
 			 	}
 			  }
 			}
+
 		xmlHTTP.open("POST", "./php/logout_action.php", true);
 		xmlHTTP.send();
 	}
 
 	function validarSesion() {
-		var user=$('#user').val();
-		console.log(user);
+		var user=$('.user').val();
+		console.log("validando "+user);
 		if (!user || user.length === 0) {
 			alert("Usted no ha iniciado sesion y sera redirigido a la pagina de iniciar sesion");
 			location.href='login.html';
